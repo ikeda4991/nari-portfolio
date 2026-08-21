@@ -8,6 +8,7 @@
   <title>Nari</title>
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -16,6 +17,7 @@
       margin: 0;
       background: #ffffff;
       color: #111111;
+
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -30,7 +32,7 @@
     }
 
     .container {
-      width: min(1100px, calc(100% - 40px));
+      width: min(1000px, calc(100% - 40px));
       margin: 0 auto;
     }
 
@@ -53,13 +55,14 @@
     /* MAIN */
 
     main {
-      padding-top: 80px;
+      padding-top: 70px;
     }
 
     .title {
+      margin-bottom: 32px;
+
       font-size: 13px;
-      color: #777777;
-      margin-bottom: 24px;
+      color: #888888;
     }
 
 
@@ -68,50 +71,113 @@
     .activities {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 64px 28px;
+
+      gap: 80px 60px;
     }
 
     .activity {
       display: block;
+      width: 300px;
+      max-width: 100%;
     }
 
-    .image {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      background: #f2f2f2;
+
+    /* MAIN IMAGE */
+
+    .activity-image {
+      width: 300px;
+      max-width: 100%;
+
+      aspect-ratio: 1 / 1;
+
       overflow: hidden;
+
+      border-radius: 12px;
+
+      background: #f2f2f2;
     }
 
-    .image img {
+    .activity-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+
       display: block;
-      transition: transform 0.4s ease;
+
+      object-fit: cover;
+
+      transition: transform 0.3s ease;
     }
 
-    .activity:hover img {
+    .activity:hover .activity-image img {
       transform: scale(1.02);
     }
 
+
+    /* INFO */
+
+    .activity-info {
+      display: flex;
+      align-items: center;
+
+      margin-top: 16px;
+    }
+
+
+    /* X LOGO */
+
+    .platform {
+      width: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
+    }
+
+    .platform img {
+      width: 18px;
+      height: 18px;
+
+      object-fit: contain;
+
+      display: block;
+    }
+
+
+    /* DIVIDER */
+
+    .info-content {
+      padding-left: 16px;
+
+      border-left: 1px solid #dddddd;
+    }
+
+
+    /* TEXT */
+
     .activity-name {
-      margin-top: 14px;
-      font-size: 17px;
+      font-size: 15px;
       font-weight: 600;
+
+      line-height: 1.3;
     }
 
     .activity-id {
-      margin-top: 4px;
-      font-size: 13px;
+      margin-top: 3px;
+
+      font-size: 12px;
+
       color: #888888;
     }
 
     .activity-description {
-      margin-top: 10px;
-      font-size: 14px;
-      line-height: 1.7;
-      color: #555555;
-      max-width: 450px;
+      margin-top: 7px;
+
+      font-size: 12px;
+      line-height: 1.6;
+
+      color: #666666;
     }
 
 
@@ -119,7 +185,9 @@
 
     footer {
       padding: 120px 0 30px;
+
       font-size: 12px;
+
       color: #aaaaaa;
     }
 
@@ -129,7 +197,7 @@
     @media (max-width: 700px) {
 
       .container {
-        width: calc(100% - 28px);
+        width: calc(100% - 32px);
       }
 
       header {
@@ -141,17 +209,40 @@
       }
 
       main {
-        padding-top: 50px;
+        padding-top: 45px;
       }
 
       .activities {
         grid-template-columns: 1fr;
-        gap: 48px;
+
+        gap: 60px;
+      }
+
+      .activity {
+        width: 260px;
+      }
+
+      .activity-image {
+        width: 260px;
+      }
+
+      .platform {
+        width: 42px;
+      }
+
+      .platform img {
+        width: 17px;
+        height: 17px;
+      }
+
+      .info-content {
+        padding-left: 14px;
       }
 
     }
 
   </style>
+
 </head>
 
 
@@ -171,7 +262,7 @@
     </header>
 
 
-    <!-- ACTIVITIES -->
+    <!-- MAIN -->
 
     <main>
 
@@ -192,7 +283,10 @@
           rel="noopener noreferrer"
         >
 
-          <div class="image">
+
+          <!-- PROFILE IMAGE -->
+
+          <div class="activity-image">
 
             <img
               src="./narigame.png"
@@ -201,19 +295,48 @@
 
           </div>
 
-          <div class="activity-name">
-            eFootball
+
+          <!-- ACCOUNT INFO -->
+
+          <div class="activity-info">
+
+
+            <!-- X LOGO -->
+
+            <div class="platform">
+
+              <img
+                src="./x.png"
+                alt="X"
+              >
+
+            </div>
+
+
+            <!-- TEXT -->
+
+            <div class="info-content">
+
+              <div class="activity-name">
+                eFootball
+              </div>
+
+              <div class="activity-id">
+                @narigame
+              </div>
+
+              <div class="activity-description">
+                選手情報やプレーについて発信
+              </div>
+
+            </div>
+
+
           </div>
 
-          <div class="activity-id">
-            @narigame
-          </div>
-
-          <div class="activity-description">
-            eFootballの選手情報やプレーについて発信しています。
-          </div>
 
         </a>
+
 
 
         <!-- Planet Uyu -->
@@ -225,50 +348,35 @@
           rel="noopener noreferrer"
         >
 
-          <div class="image">
+          <div class="activity-image">
           </div>
 
-          <div class="activity-name">
-            Planet Uyu
-          </div>
+          <div class="activity-info">
 
-          <div class="activity-id">
-            @planet_uyu
+            <div class="platform">
+
+              <img
+                src="./x.png"
+                alt="X"
+              >
+
+            </div>
+
+            <div class="info-content">
+
+              <div class="activity-name">
+                Planet Uyu
+              </div>
+
+              <div class="activity-id">
+                @planet_uyu
+              </div>
+
+            </div>
+
           </div>
 
         </a>
-
-
-        <!-- Peppe Memo -->
-
-        <div class="activity">
-
-          <div class="image">
-          </div>
-
-          <div class="activity-name">
-            Peppe Memo
-          </div>
-
-          <div class="activity-id">
-            App
-          </div>
-
-        </div>
-
-
-        <!-- Music -->
-
-        <div class="activity">
-
-          <div class="image">
-          </div>
-
-          <div class="activity-name">
-            Music
-          </div>
-
-        </div>
 
 
       </div>
