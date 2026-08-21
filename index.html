@@ -148,14 +148,22 @@
 
     /* SNS LOGO */
 
-    .social-link img {
-      width: 18px;
-      height: 18px;
+.social-link img {
+  width: 18px;
+  height: 18px;
 
-      object-fit: contain;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 
-      flex-shrink: 0;
-    }
+/* YouTubeロゴだけ少し大きく */
+.social-link img[alt="YouTube"] {
+  width: 22px;
+  height: 22px;
+
+  margin-left: -2px;
+  margin-right: -2px;
+}
 
 
     /* ARROW */
