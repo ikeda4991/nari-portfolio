@@ -16,7 +16,6 @@
       margin: 0;
       background: #ffffff;
       color: #111111;
-
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -35,12 +34,13 @@
       margin: 0 auto;
     }
 
+
+    /* HEADER */
+
     header {
-      min-height: 100px;
+      height: 100px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 30px;
     }
 
     .name {
@@ -49,20 +49,8 @@
       letter-spacing: -0.03em;
     }
 
-    .social-links {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
 
-    .social-links a {
-      font-size: 14px;
-      color: #666666;
-    }
-
-    .social-links a:hover {
-      color: #111111;
-    }
+    /* MAIN */
 
     main {
       padding-top: 80px;
@@ -74,13 +62,16 @@
       margin-bottom: 24px;
     }
 
-    .works {
+
+    /* ACTIVITIES */
+
+    .activities {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 60px 28px;
+      gap: 64px 28px;
     }
 
-    .work {
+    .activity {
       display: block;
     }
 
@@ -96,38 +87,44 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.35s ease;
+      transition: transform 0.4s ease;
     }
 
-    .work:hover .image img {
+    .activity:hover img {
       transform: scale(1.02);
     }
 
-    .work-name {
+    .activity-name {
       margin-top: 14px;
       font-size: 17px;
       font-weight: 600;
     }
 
-    .work-id {
+    .activity-id {
       margin-top: 4px;
       font-size: 13px;
       color: #888888;
     }
 
-    .work-description {
+    .activity-description {
       margin-top: 10px;
       font-size: 14px;
       line-height: 1.7;
       color: #555555;
-      max-width: 420px;
+      max-width: 450px;
     }
+
+
+    /* FOOTER */
 
     footer {
       padding: 120px 0 30px;
       font-size: 12px;
       color: #aaaaaa;
     }
+
+
+    /* MOBILE */
 
     @media (max-width: 700px) {
 
@@ -136,36 +133,25 @@
       }
 
       header {
-        min-height: 80px;
+        height: 80px;
       }
 
       .name {
         font-size: 18px;
       }
 
-      .social-links {
-        gap: 14px;
-      }
-
-      .social-links a {
-        font-size: 12px;
-      }
-
-      .social-links .username {
-        display: none;
-      }
-
       main {
         padding-top: 50px;
       }
 
-      .works {
+      .activities {
         grid-template-columns: 1fr;
-        gap: 45px;
+        gap: 48px;
       }
-    }
-  </style>
 
+    }
+
+  </style>
 </head>
 
 
@@ -173,105 +159,129 @@
 
   <div class="container">
 
+
+    <!-- HEADER -->
+
     <header>
 
       <div class="name">
         Nari
       </div>
 
-      <nav class="social-links">
-
-        <a
-          href="https://x.com/narigame"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          X <span class="username">@narigame</span>
-        </a>
-
-        <a
-          href="https://x.com/planet_uyu"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          X <span class="username">@planet_uyu</span>
-        </a>
-
-        <a
-          href="https://www.instagram.com/na__ir_/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram <span class="username">@na__ir_</span>
-        </a>
-
-      </nav>
-
     </header>
 
+
+    <!-- ACTIVITIES -->
 
     <main>
 
       <div class="title">
-        Works
+        Activities
       </div>
 
-      <div class="works">
+
+      <div class="activities">
+
+
+        <!-- eFootball -->
 
         <a
-          class="work"
+          class="activity"
           href="https://x.com/narigame"
           target="_blank"
           rel="noopener noreferrer"
         >
 
           <div class="image">
+
             <img
-              src="naeigame.png"
-              alt="@narigame"
+              src="./narigame.png"
+              alt="eFootball"
             >
+
           </div>
 
-          <div class="work-name">
+          <div class="activity-name">
             eFootball
           </div>
 
-          <div class="work-id">
+          <div class="activity-id">
             @narigame
           </div>
 
-          <div class="work-description">
+          <div class="activity-description">
             eFootballの選手情報やプレーについて発信しています。
           </div>
 
         </a>
 
 
-        <a class="work" href="#">
-          <div class="image"></div>
-          <div class="work-name">Peppe Memo</div>
+        <!-- Planet Uyu -->
+
+        <a
+          class="activity"
+          href="https://x.com/planet_uyu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <div class="image">
+          </div>
+
+          <div class="activity-name">
+            Planet Uyu
+          </div>
+
+          <div class="activity-id">
+            @planet_uyu
+          </div>
+
         </a>
 
 
-        <a class="work" href="#">
-          <div class="image"></div>
-          <div class="work-name">Music</div>
-        </a>
+        <!-- Peppe Memo -->
+
+        <div class="activity">
+
+          <div class="image">
+          </div>
+
+          <div class="activity-name">
+            Peppe Memo
+          </div>
+
+          <div class="activity-id">
+            App
+          </div>
+
+        </div>
 
 
-        <a class="work" href="#">
-          <div class="image"></div>
-          <div class="work-name">Visual</div>
-        </a>
+        <!-- Music -->
+
+        <div class="activity">
+
+          <div class="image">
+          </div>
+
+          <div class="activity-name">
+            Music
+          </div>
+
+        </div>
+
 
       </div>
 
     </main>
 
 
+    <!-- FOOTER -->
+
     <footer>
       Nari
     </footer>
+
 
   </div>
 
