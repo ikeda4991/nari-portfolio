@@ -1,18 +1,279 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nari</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+      background: #ffffff;
+      color: #111111;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .status {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #111;
+    }
+
+    .hero {
+      padding: 100px 0 140px;
+      max-width: 760px;
+    }
+
+    .hero-label {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 88px);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      margin: 0;
+      font-weight: 650;
+    }
+
+    .hero-text {
+      margin-top: 36px;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #555;
+      max-width: 540px;
+    }
+
+    section {
+      padding: 40px 0 120px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      color: #777;
+      border-bottom: 1px solid #e7e7e7;
+      padding-bottom: 16px;
+      margin-bottom: 34px;
+    }
+
+    .works {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 56px 28px;
+    }
+
+    .work-card {
+      display: block;
+    }
+
+    .work-image {
+      aspect-ratio: 4 / 3;
+      background: #f1f1f1;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    .work-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .work-card:hover img {
+      transform: scale(1.025);
+    }
+
+    .work-name {
+      margin-top: 16px;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .work-meta {
+      margin-top: 6px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    .about {
+      max-width: 650px;
+      font-size: 20px;
+      line-height: 1.9;
+      letter-spacing: -0.01em;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+    }
+
+    .links a {
+      font-size: 18px;
+      border-bottom: 1px solid #bbb;
+      padding-bottom: 3px;
+    }
+
+    footer {
+      padding: 40px 0 36px;
+      color: #999;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      header {
+        padding: 22px 0;
+      }
+
+      .hero {
+        padding: 76px 0 110px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      section {
+        padding-bottom: 90px;
+      }
+
+      .works {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about {
+        font-size: 17px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <h1>Nari</h1>
+  <div class="container">
 
-  <p>ゲーム・アプリ・音楽・創作などの活動をまとめています。</p>
+    <header>
+      <div class="logo">Nari.</div>
+      <div class="status"></div>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <div class="hero-label">Creator / Japan</div>
+
+        <h1>
+          I make<br>
+          things I like.
+        </h1>
+
+        <p class="hero-text">
+          ゲーム、アプリ、音楽、グラフィックなど、
+          興味のあるものを自由に制作しています。
+        </p>
+      </section>
+
+      <section>
+        <div class="section-title">Selected Works</div>
+
+        <div class="works">
+
+          <a class="work-card" href="#">
+            <div class="work-image"></div>
+            <div class="work-name">eFootball</div>
+            <div class="work-meta">Content / Social Media</div>
+          </a>
+
+          <a class="work-card" href="#">
+            <div class="work-image"></div>
+            <div class="work-name">Peppe Memo</div>
+            <div class="work-meta">iOS Application</div>
+          </a>
+
+          <a class="work-card" href="#">
+            <div class="work-image"></div>
+            <div class="work-name">Music</div>
+            <div class="work-meta">Composition / Guitar</div>
+          </a>
+
+          <a class="work-card" href="#">
+            <div class="work-image"></div>
+            <div class="work-name">Visual Works</div>
+            <div class="work-meta">Illustration / Design</div>
+          </a>
+
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">About</div>
+
+        <div class="about">
+          Nariです。ゲーム関連の発信、アプリ制作、音楽、デザインなど、
+          ジャンルを限定せずにいろいろなものを作っています。
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">Links</div>
+
+        <div class="links">
+          <a href="#">X ↗</a>
+          <a href="#">YouTube ↗</a>
+          <a href="#">GitHub ↗</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © 2026 Nari
+    </footer>
+
+  </div>
 
 </body>
-
 </html>
