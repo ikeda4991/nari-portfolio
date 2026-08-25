@@ -8,15 +8,18 @@
   <title>Nari</title>
 
   <style>
+    /* =========================
+       BASE
+    ========================= */
 
     * {
       box-sizing: border-box;
     }
 
     body {
-  margin: 0;
-  background: #f7f7f5;
-  color: #111111;
+      margin: 0;
+      background: #f7f7f5;
+      color: #111111;
 
       font-family:
         -apple-system,
@@ -37,7 +40,9 @@
     }
 
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       height: 100px;
@@ -45,13 +50,16 @@
       align-items: center;
     }
 
-.name {
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: -0.04em;
-}
+    .name {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+    }
 
-    /* MAIN */
+
+    /* =========================
+       MAIN
+    ========================= */
 
     main {
       padding-top: 40px;
@@ -59,7 +67,9 @@
     }
 
 
-    /* ACTIVITY */
+    /* =========================
+       ACTIVITY
+    ========================= */
 
     .activity {
       margin-bottom: 70px;
@@ -73,31 +83,25 @@
       font-weight: 600;
     }
 
-
-    /* CONTENT */
-
     .activity-content {
       display: flex;
       align-items: center;
-
       gap: 32px;
 
       padding-top: 22px;
     }
 
 
-    /* IMAGE */
+    /* Activity Image */
 
     .activity-image {
       width: 130px;
       height: 130px;
 
       flex-shrink: 0;
-
       overflow: hidden;
 
       border-radius: 10px;
-
       background: #f2f2f2;
     }
 
@@ -106,12 +110,13 @@
       height: 100%;
 
       display: block;
-
       object-fit: cover;
     }
 
 
-    /* LINKS */
+    /* =========================
+       SOCIAL LINKS
+    ========================= */
 
     .social-links {
       display: flex;
@@ -124,11 +129,9 @@
     .social-link {
       display: flex;
       align-items: center;
-
       gap: 14px;
 
       padding: 12px 4px;
-
       border-bottom: 1px solid #eeeeee;
 
       font-size: 14px;
@@ -145,32 +148,34 @@
     }
 
 
-    /* SNS LOGO */
+    /* Social Icons */
 
-.social-link img {
-  width: 18px;
-  height: 18px;
+    .social-link img {
+      width: 18px;
+      height: 18px;
 
-  object-fit: contain;
-  flex-shrink: 0;
-}
+      flex-shrink: 0;
+      object-fit: contain;
+    }
 
     .social-link img[alt="YouTube"] {
-  transform: scale(1.55);
-}
+      transform: scale(1.55);
+    }
 
-    /* ARROW */
+
+    /* Arrow */
 
     .arrow {
       margin-left: auto;
 
       color: #aaaaaa;
-
       font-size: 12px;
     }
 
 
-    /* MOBILE */
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 600px) {
 
@@ -227,11 +232,8 @@
         width: 16px;
         height: 16px;
       }
-
     }
-
   </style>
-
 </head>
 
 
@@ -240,21 +242,23 @@
   <div class="container">
 
 
-    <!-- HEADER -->
+    <!-- =========================
+         HEADER
+    ========================== -->
 
     <header>
-      <div class="name">
-        Nari
-      </div>
+      <div class="name">Nari</div>
     </header>
 
+
+    <!-- =========================
+         MAIN
+    ========================== -->
 
     <main>
 
 
-      <!-- ==================== -->
-      <!-- Music -->
-      <!-- ==================== -->
+      <!-- MUSIC -->
 
       <section class="activity">
 
@@ -275,20 +279,14 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-
               <img
                 src="./instagram.png"
                 alt="Instagram"
               >
 
-              <span>
-                @na__ir_
-              </span>
+              <span>@na__ir_</span>
 
-              <span class="arrow">
-                ↗
-              </span>
-
+              <span class="arrow">↗</span>
             </a>
 
           </div>
@@ -298,10 +296,7 @@
       </section>
 
 
-
-      <!-- ==================== -->
-      <!-- Comics -->
-      <!-- ==================== -->
+      <!-- COMICS -->
 
       <section class="activity">
 
@@ -312,12 +307,10 @@
         <div class="activity-content">
 
           <div class="activity-image">
-
             <img
               src="./planet_uyu.png"
               alt="Comics"
             >
-            
           </div>
 
           <div class="social-links">
@@ -328,20 +321,14 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-
               <img
                 src="./x.png"
                 alt="X"
               >
 
-              <span>
-                @planet_uyu
-              </span>
+              <span>@planet_uyu</span>
 
-              <span class="arrow">
-                ↗
-              </span>
-
+              <span class="arrow">↗</span>
             </a>
 
           </div>
@@ -351,9 +338,7 @@
       </section>
 
 
-      <!-- ==================== -->
-      <!-- Gaming -->
-      <!-- ==================== -->
+      <!-- GAMING -->
 
       <section class="activity">
 
@@ -364,12 +349,10 @@
         <div class="activity-content">
 
           <div class="activity-image">
-
             <img
               src="./narigame.png"
               alt="Gaming"
             >
-
           </div>
 
           <div class="social-links">
@@ -383,20 +366,14 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-
               <img
                 src="./x.png"
                 alt="X"
               >
 
-              <span>
-                @narigame
-              </span>
+              <span>@narigame</span>
 
-              <span class="arrow">
-                ↗
-              </span>
-
+              <span class="arrow">↗</span>
             </a>
 
 
@@ -408,21 +385,16 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-
               <img
                 src="./youtube.png"
                 alt="YouTube"
               >
 
-              <span>
-                準備中
-              </span>
+              <span>準備中</span>
 
-              <span class="arrow">
-                ↗
-              </span>
-
+              <span class="arrow">↗</span>
             </a>
+
 
           </div>
 
